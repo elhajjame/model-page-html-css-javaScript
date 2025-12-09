@@ -20,7 +20,14 @@ for(let i =0; i < btnsOpenModel.length; i++){
 }
 
 btnCloseModel.addEventListener('click', closeModel);
-overlay.addEventListener('click', closeModel)
+overlay.addEventListener('click', closeModel);
+
+document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && !model.classList.contains('hidden')) {
+        closeModel();
+    }
+    console.log(e.key);
+})
 
 // for (let i = 0; i < btnsOpenModel.length; i++) {
 
